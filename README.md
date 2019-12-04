@@ -69,35 +69,6 @@ generateRoutes<T>(array: T[], callback: (item: T) => [string, string]): FrontJRo
 | array | オブジェクトを生成する元となる配列。 |
 | callback | `array`の各要素を引数に受け取る関数。`` [`出力先のパス`, `ファイルの内容`] ``の形をした配列を返す必要があります。 |
 
-```typescript
-import { p } from '@frontj/elements'
-import { build, generateRoutes } from '@frontj/builder'
-
-const posts = [
-  {
-    id: 1,
-    content: 'post1'
-  },
-  {
-    id: 2,
-    content: 'post2'
-  },
-  {
-    id: 3,
-    content: 'post3'
-  }
-]
-
-build({
-  routes: {
-    '/': p('top'),
-    ...generateRoutes(posts, (post) => {
-      return [`/posts/${post.id}/`, p(post.content)]
-    })
-  }
-})
-```
-
 ### Types
 
 #### `FrontJBuildOptions`
@@ -128,4 +99,8 @@ FrontJRoutes {
 
 | 引数 | 説明 |
 | --- | --- |
-| route | 出力先のパス。`/foo/bar/`(または`/foo/bar`)とすると`/foo/bar/index.html`が出力されます。`/foo/bar.html`というようにHTMLファイルを作成することもできます。このプロパティの値がHTMLファイルに書き込まれます。 |
+| route | 出力先のパス。`/foo/bar/`(または`/foo/bar`)とすると`/foo/bar/index.html`が出力されます。`/foo/bar.html`とするとHTMLファイルを作成することができます。このプロパティの値がHTMLファイルに書き込まれます。 |
+
+## License
+
+[MIT](https://github.com/frontJ/builder/blob/master/LICENSE)
