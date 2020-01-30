@@ -61,13 +61,13 @@ build(options: FrontJBuildOptions): void
 配列から[`FrontJRoutes`](#frontjroutes)型のオブジェクトを生成するメソッドです。<br>[`FrontJBuildOptions`](#frontjbuildoptions)型の`routes`プロパティに値を設定する際に有用です。
 
 ```typescript
-generateRoutes<T>(array: T[], callback: (item: T) => [string, string]): FrontJRoutes
+generateRoutes<T>(array: T[], callback: (item: T, index: number) => [string, string]): FrontJRoutes
 ```
 
 | 引数 | 説明 |
 | --- | --- |
 | array | オブジェクトを生成する元となる配列。 |
-| callback | `array`の各要素を引数に受け取る関数。`` [`出力先のパス`, `ファイルの内容`] ``の形をした配列を返す必要があります。 |
+| callback | `array`の各要素とそのインデックスを引数に受け取る関数。`` [`出力先のパス`, `ファイルの内容`] ``の形をした配列を返す必要があります。 |
 
 ### Types
 
