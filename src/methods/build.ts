@@ -1,6 +1,7 @@
 import rimraf from 'rimraf'
 import fs from 'fs-extra'
 import path from 'path'
+import { validateBuildArguments } from '../functions'
 import { FrontJBuildOptions } from '../types'
 
 function write (filePath: string, content: string): void {
@@ -19,6 +20,8 @@ function write (filePath: string, content: string): void {
 }
 
 export function build (options: FrontJBuildOptions): void {
+  validateBuildArguments(options)
+
   const outDir = options.outDir ?? 'dist'
   const routes = options.routes
 
