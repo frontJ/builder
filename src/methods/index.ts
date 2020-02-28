@@ -1,7 +1,2 @@
-import { build } from './build'
-import { generateRoutes } from './generateRoutes'
-
-export {
-  build,
-  generateRoutes
-}
+export { build } from './build'
+export { generateRoutes } from './generateRoutes'

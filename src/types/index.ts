@@ -1,7 +1,2 @@
-import { FrontJBuildOptions } from './FrontJBuildOptions'
-import { FrontJRoutes } from './FrontJRoutes'
-
-export {
-  FrontJBuildOptions,
-  FrontJRoutes
-}
+export { FrontJBuildOptions } from './FrontJBuildOptions'
+export { FrontJRoutes } from './FrontJRoutes'
