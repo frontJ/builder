@@ -1,6 +1,6 @@
 {
   "name": "@frontj/builder",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Builder for frontJ.",
   "main": "dist-cjs/index.js",
   "module": "dist-esm/index.js",
